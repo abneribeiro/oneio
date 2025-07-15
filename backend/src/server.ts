@@ -1,5 +1,8 @@
 import express from "express"
 import 'dotenv/config';
+import cors from 'cors'
+
+
 import autRoutes from './routes/auth.routes'
 
 if (!process.env.JWT_SECRET) {
@@ -8,6 +11,10 @@ if (!process.env.JWT_SECRET) {
   }
 
 const app = express()
+
+
+app.use(cors())
+
 app.use(express.json())
 
 app.use('/api/v1/auth', autRoutes)
