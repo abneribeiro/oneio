@@ -12,11 +12,11 @@ app.use(express.json())
 
 app.use('/api/v1/auth', autRoutes)
 
-app.get("/heath", (req, res)=>{
+app.get("/heath", (_, res)=>{
     res.send({msg: "its working"})
 })
 
 const port = process.env.PORT ?? 8080;
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.info(`Server running at http://localhost:${port}`);
 }); 

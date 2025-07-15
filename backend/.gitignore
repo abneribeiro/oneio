@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+
+# IDE files
+.vscode/
+.idea/
+
+# Drizzle meta files
+drizzle/meta/
